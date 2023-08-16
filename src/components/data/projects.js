@@ -1,0 +1,38 @@
+export const ProjectData=[
+    {
+        id:1,
+        title:"Ecomify",
+        about: " Ecomify es una aplicación de comercio electrónico construida con React, Vite y Tailwind CSS. Permite a los usuarios buscar productos por título y categoría, y también ver sus pedidos anteriores.",
+        tags:["ReactJS", "Vite", "Tailwind CSS"],
+        demo:"https://ecomify.netlify.app/",
+        github:"https://github.com/milagromartino/e-commerce",
+        image:"https://raw.githubusercontent.com/milagromartino/e-commerce/main/ecomify.png",
+    },
+    {
+        id:1,
+        title:"To Do App",
+        about: "Una aplicación simple de lista de tareas hecha con React.",
+        tags:["React", "React Hooks"],
+        demo:"https://milagromartino.github.io/todo-app/",
+        github:"https://github.com/milagromartino/todo-app/tree/gh-pages",
+        image:"https://raw.githubusercontent.com/milagromartino/todo-app/gh-pages/todoapp.png",
+    },
+    {
+        id:1,
+        title:"Travel Sense",
+        about: " Travel Sense es una aplicación de agencia de viajes fantasia que te permite explorar destinos.",
+        tags:["TailwindCSS"],
+        demo:"https://anamdiazs.github.io/PlatziTravel/",
+        github:"https://github.com/milagromartino/travel-sense",
+        image:"https://raw.githubusercontent.com/milagromartino/travel-sense/master/travelsense.png",
+    },
+    {
+        id:1,
+        title:"Music Player",
+        about: "Este es un proyecto de reproductor de música. Cuenta con controles de reproducción básicos, como reproducir, pausar, detener y barra de progreso para mostrar la duración de la canción y permitir la navegación.",
+        tags:["JavaScript"],
+        demo:"https://player-for-music.netlify.app/",
+        github:"https://github.com/milagromartino/travel-sense",
+        image:"https://raw.githubusercontent.com/milagromartino/music-player/main/music%20player.png",
+    },
+];
