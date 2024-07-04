@@ -51,26 +51,5 @@ export const SkillsData = [
           <i class="devicon-postgresql-plain colored"></i>
       },
     ],
-  },
-  {
-    type: "Programming Languages",
-    list: [
-      {
-        name: "Java",
-        icon:
-          <i class="devicon-java-plain colored"></i>
-
-      },
-      {
-        name: "Python",
-        icon:
-          <i class="devicon-python-plain colored"></i>
-      },
-      {
-        name: "C++",
-        icon:
-          <i class="devicon-cplusplus-plain"></i>
-      },
-    ],
-  },
+  }
 ];
