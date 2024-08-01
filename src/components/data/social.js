@@ -18,6 +18,6 @@ export const SocialData = [
     {
         platform: "Resumé",
         icon: require("../../assets/icons/document.png"),
-        link: "https://bitly.cx/ZBCA",
+        link: "https://bitly.cx/pgswf",
     }
 ];
