@@ -14,11 +14,6 @@ function Web() {
         </a>
     </div>
     <div className="web-option">
-        <a href="#work">
-        <i class="fi-rr-briefcase option-icon"></i>Certificados
-        </a>
-    </div>
-    <div className="web-option">
         <a href="#contact">
         <i class="fi fi-rr-user option-icon"></i>Contacto
         </a>

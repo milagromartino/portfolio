@@ -16,6 +16,7 @@
 .info-name {
     color: #a364ff;
     font-size: 32px;
+    font-weight: 600;
 }
 
 @media only screen and (max-width: 720px) {

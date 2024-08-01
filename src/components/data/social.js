@@ -14,5 +14,10 @@ export const SocialData = [
         platform:"WhatsApp",
         icon: require("../../assets/icons/whatsapp.png"),
         link: "https://api.whatsapp.com/send/?phone=595982819678&text&type=phone_number&app_absent=0",
+    },
+    {
+        platform: "Resumé",
+        icon: require("../../assets/icons/document.png"),
+        link: "https://bitly.cx/ZBCA",
     }
 ];

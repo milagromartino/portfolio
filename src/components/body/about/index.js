@@ -8,7 +8,7 @@ function About() {
         <div className="about-info">
         Hola, un gusto! Soy
          <br /> <span className="info-name">Milagro Martino</span>.
-         <br /> Desarrolladora frontend con experiencia en tecnologías como Vue, Vuetify, React y Tailwind.
+         <br /> Desarrolladora frontend con experiencia en tecnologías como JavaScript, Vue.js, React.js, TailwindCSS.
         </div>
         <div className="about-photo">
           <img 

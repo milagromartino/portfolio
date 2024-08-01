@@ -50,6 +50,11 @@ export const SkillsData = [
         icon:
           <i class="devicon-postgresql-plain colored"></i>
       },
+      {
+        name: "MongoDB",
+        icon:
+        <i class="devicon-mongodb-plain colored"></i>
+      },
     ],
   }
 ];
