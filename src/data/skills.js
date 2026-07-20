@@ -1,0 +1,36 @@
+export const skillsData = [
+  {
+    id: "frontend",
+    title: { es: "Frontend", en: "Frontend" },
+    items: ["JavaScript", "React.js", "Next.js", "Vue.js", "Vuetify", "Tailwind CSS"],
+  },
+  {
+    id: "backend",
+    title: { es: "Backend, APIs & Bases de datos", en: "Backend, APIs & Databases" },
+    items: ["Node.js", "Express.js", "REST APIs", "SQL Server", "PostgreSQL"],
+  },
+  {
+    id: "zoho",
+    title: { es: "Ecosistema Zoho & Automatización", en: "Zoho Ecosystem & Automation" },
+    items: [
+      "Zoho CRM",
+      "Zoho Analytics",
+      "Zoho Campaigns",
+      "Zoho Books",
+      "Zoho Inventory",
+      "Zoho Projects",
+      "Zoho Desk",
+      "Zoho Booking",
+      "Zoho Social",
+      "Zoho Survey",
+      "Zoho Forms",
+      "Zoho Sign",
+      "Zoho Writer",
+      "Zoho Bigin",
+      "Deluge",
+      "Workflows & Blueprints",
+      "Zoho Flow",
+      "Make",
+    ],
+  },
+];
