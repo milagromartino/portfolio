@@ -1,51 +1,64 @@
 import React from "react";
+import { Briefcase, Calendar, MapPin } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { experienceData } from "../data/experience";
 
 export default function Experience() {
-  const { t, lang } = useLanguage();
+  const { lang, t } = useLanguage();
 
   return (
-    <section id="experience" className="max-w-content mx-auto px-6 py-10 md:py-14">
-      <div className="file-window">
-        <div className="file-titlebar">
-          <span className="file-dot"></span>
-          <span className="file-dot"></span>
-          <span className="file-dot"></span>
-          <span className="file-name">experience.tsx</span>
-        </div>
-
-        <div className="px-6 sm:px-10 py-9 sm:py-10">
-          <p className="code-comment mb-5">// {t("experience.eyebrow").toLowerCase()}</p>
-          <h2 className="font-display font-medium text-2xl text-ink mb-8">{t("experience.title")}</h2>
-
-          <div className="space-y-9">
-            {experienceData.map((job, i) => (
-              <div key={job.id} className="flex gap-4">
-                <span className="code-index pt-1 select-none">[{i}]</span>
-                <div className="flex-1">
-                  <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                    <h3 className="font-display font-medium text-base text-ink">
-                      {job.role[lang]} <span className="text-inkSoft font-normal">· {job.company}</span>
-                      {job.current && (
-                        <span className="tag-chip tag-teal ml-2 align-middle">active</span>
-                      )}
-                    </h3>
-                    <span className="font-mono text-xs text-inkMuted whitespace-nowrap">{job.date[lang]}</span>
-                  </div>
-                  <ul className="mt-3 space-y-1.5">
-                    {job.bullets[lang].map((b, bi) => (
-                      <li key={bi} className="font-body text-sm text-inkSoft leading-relaxed flex gap-2">
-                        <span className="text-accent mt-1.5">—</span>
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+    <section className="mx-auto max-w-content px-5 pb-12">
+      <h2 className="mb-3 text-center text-sm text-mute">{t("experience.title")}</h2>
+      <div className="flex flex-col gap-3">
+        {experienceData.map((job) => (
+          <article
+            key={job.id}
+            className={`rounded-3xl border bg-card p-5 shadow-card sm:p-6 ${
+              job.current ? "border-accent" : "border-line"
+            }`}
+          >
+            <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-2">
+              <div>
+                <h3 className="flex items-center gap-2 text-base">
+                  <Briefcase size={16} className="shrink-0 text-soft" aria-hidden="true" />
+                  {job.role[lang]}
+                </h3>
+                <p className="mt-1 flex flex-wrap items-center gap-2 text-sm font-medium">
+                  {job.company}
+                  {job.current && (
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-goodsoft px-2.5 py-0.5 text-[11px] font-normal text-good">
+                      <span className="relative flex h-2 w-2" aria-hidden="true">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-good opacity-60" />
+                        <span className="relative inline-flex h-2 w-2 rounded-full bg-good" />
+                      </span>
+                      {t("experience.current")}
+                    </span>
+                  )}
+                </p>
               </div>
-            ))}
-          </div>
-        </div>
+              <div className="space-y-1 text-xs text-soft sm:text-right">
+                <p className="flex items-center gap-1.5 sm:justify-end">
+                  <Calendar size={13} aria-hidden="true" />
+                  {job.date[lang]}
+                </p>
+                <p className="flex items-center gap-1.5 sm:justify-end">
+                  <MapPin size={13} aria-hidden="true" />
+                  {job.location[lang]}
+                </p>
+              </div>
+            </div>
+
+            <p className="mt-4 text-sm leading-relaxed text-soft">{job.summary[lang]}</p>
+
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {job.skills[lang].map((s) => (
+                <span key={s} className="rounded-md border border-line bg-chip px-2 py-1 text-[11px]">
+                  {s}
+                </span>
+              ))}
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );

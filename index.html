@@ -2,25 +2,34 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="alternate icon" href="/public/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#12141A" />
+    <meta name="theme-color" content="#f4f5f9" />
     <meta
       name="description"
-      content="Milagro Martino — Ingeniera Informática, Frontend Developer y CRM Specialist en Paraguay. Portafolio de proyectos, experiencia y automatizaciones."
+      content="Milagro Martino — Ingeniera Informática en Paraguay. Automatización de procesos, soluciones CRM e integración de sistemas."
     />
     <meta property="og:title" content="Milagro Martino — Portfolio" />
- <meta
-  property="og:description"
-  content="Frontend, automatizaciones y CRM: en eso trabajo día a día."
-/>
+    <meta
+      property="og:description"
+      content="Automatización de procesos, soluciones CRM e integración de sistemas."
+    />
     <meta property="og:type" content="website" />
-    <title>Milagro Martino · Portfolio</title>
+    <title>Milagro Martino — Portfolio</title>
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (dark) document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
   </head>

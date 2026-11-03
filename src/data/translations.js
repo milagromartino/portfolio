@@ -1,110 +1,132 @@
 export const translations = {
   es: {
     nav: {
+      home: "Inicio",
       about: "Sobre mí",
-      experience: "Experiencia",
-      skills: "Skills",
       projects: "Proyectos",
       contact: "Contacto",
+      menu: "Navegación principal",
+      theme: "Cambiar tema",
+      lang: "Cambiar idioma",
     },
     hero: {
-      eyebrow: "PORTFOLIO — ASUNCIÓN, PY",
-      title: "Milagro Martino",
-      role: "Developer / CRM Specialist",
-      pitch:
-        "Frontend, automatizaciones y CRM: en eso trabajo día a día.",
-      cta_projects: "Ver proyectos",
+      title_a: "Automatización de procesos",
+      title_b: "y soluciones CRM",
+      subtitle: "Ingeniera Informática  |  Desarrollo de Software y Soluciones CRM",
+      cta_about: "Sobre mí",
       cta_cv: "Descargar CV",
-      flow: ["Ingeniera Informática", "Front-End Developer", "Analista de Desarrollo"],
     },
     about: {
-      eyebrow: "01 · SOBRE MÍ",
       title: "Sobre mí",
-      body: "Soy Ingeniera Informática con experiencia en desarrollo web frontend, y conocimientos en backend y bases de datos. Tengo experiencia trabajando con JavaScript, Vue.js, Vuetify, React.js, Next.js y Tailwind CSS, creando interfaces modernas y fáciles de usar, además de SQL Server, PostgreSQL y APIs REST con Node.js y Express. Me gusta entender bien lo que necesita el negocio y convertirlo en soluciones técnicas.",
-      facts: [
-        { label: "Educación", value: "Ing. en Informática — UNIDA (2020–2025)" },
-        { label: "Idiomas", value: "Español (nativo) · Inglés (intermedio)" },
-        { label: "Ubicación", value: "Asunción, Paraguay" },
+      paragraphs: [
+        "Soy Ingeniera Informática con experiencia en CRM, automatización de procesos y desarrollo front-end. Me distingo por mi capacidad de aprendizaje continuo, mi facilidad para el trabajo en equipo y mi enfoque en nuevos retos profesionales.",
       ],
     },
-    experience: {
-      eyebrow: "02 · TRAYECTORIA",
-      title: "Experiencia",
-    },
-    skills: {
-      eyebrow: "03 · STACK",
-      title: "Skills",
+    work: {
+      title: "Con qué trabajo",
+      cards: [
+        {
+          title: "Automatización de procesos",
+          body: "Flujos, reglas y funciones a medida para que las tareas se hagan solas.",
+        },
+        {
+          title: "Soluciones CRM",
+          body: "Configuración, módulos, reportes y paneles según cómo trabaja cada equipo.",
+        },
+        {
+          title: "Integración de sistemas",
+          body: "Conecto el CRM con otras herramientas para que los datos circulen.",
+        },
+      ],
+      dev_title: "Y también desarrollo interfaces web",
+      dev_link: "Ver proyectos",
     },
     projects: {
-      eyebrow: "04 · PROYECTOS",
       title: "Proyectos",
+      thesis_badge: "Trabajo final de grado",
+      personal_badge: "Proyecto personal",
+      pro_badge: "Proyecto profesional",
+      pro_title: "Implementaciones de Zoho",
+      personal_title: "Proyectos personales y de tesis",
       demo: "Demo",
       code: "Código",
-      docs: "Doc. técnica",
+    },
+    experience: {
+      title: "Experiencia",
+      current: "Actualmente",
     },
     contact: {
-      eyebrow: "05 · CONTACTO",
-      title: "Hablemos",
-      body: "¿Querés que colaboremos? ¡Escribime!",
-      cta: "Escribir por WhatsApp",
-      cta_email: "Enviar un email",
+      title: "¿Querés que colaboremos? ¡Escribime!",
+      cta_email: "Correo",
+      cta_whatsapp: "WhatsApp",
     },
     footer: {
-      built: "Diseñado y construido por Milagro Martino.",
+      rights: "© 2026 Milagro Martino",
     },
   },
   en: {
     nav: {
-      about: "About",
-      experience: "Experience",
-      skills: "Skills",
+      home: "Home",
+      about: "About me",
       projects: "Projects",
       contact: "Contact",
+      menu: "Main navigation",
+      theme: "Change theme",
+      lang: "Change language",
     },
     hero: {
-      eyebrow: "PORTFOLIO — ASUNCIÓN, PY",
-      title: "Milagro Martino",
-      role: "Developer / CRM Specialist",
-      pitch:
-        "Frontend, automation, and CRM: that's what I work on every day.",
-      cta_projects: "View projects",
-      cta_cv: "Download resume",
-      flow: ["Computer Science Engineer", "Front-End Developer", "Developer Analyst"],
+      title_a: "Business Automation",
+      title_b: "and CRM Solutions",
+      subtitle: "Computer Science Engineer  |  Software Development & CRM Solutions",
+      cta_about: "About me",
+      cta_cv: "Download CV",
     },
     about: {
-      eyebrow: "01 · ABOUT",
       title: "About me",
-      body: "I'm a Computer Science Engineer with experience in frontend web development, and knowledge of backend and databases. I have experience working with JavaScript, Vue.js, Vuetify, React.js, Next.js, and Tailwind CSS, building modern and easy-to-use interfaces. I also know SQL Server, PostgreSQL, and REST APIs with Node.js and Express. I like to understand what the business needs and turn it into technical solutions.",
-      facts: [
-        { label: "Education", value: "Bachelor's Degree in Computer Science — UNIDA (2020–2025)" },
-        { label: "Languages", value: "Spanish (native) · English (intermediate)" },
-        { label: "Location", value: "Asunción, Paraguay" },
+      paragraphs: [
+        "I'm a Computer Science Engineer with experience in CRM, process automation, and front-end development. I stand out for my ability to keep learning, my ease working with others, and my focus on new professional challenges.",
       ],
     },
-    experience: {
-      eyebrow: "02 · TRACK RECORD",
-      title: "Experience",
-    },
-    skills: {
-      eyebrow: "03 · STACK",
-      title: "Skills",
+    work: {
+      title: "What I work with",
+      cards: [
+        {
+          title: "Business automation",
+          body: "Flows, rules, and custom functions so tasks run on their own.",
+        },
+        {
+          title: "CRM solutions",
+          body: "Setup, modules, reports, and dashboards built around each team.",
+        },
+        {
+          title: "System integrations",
+          body: "I connect the CRM with other tools so data moves between them.",
+        },
+      ],
+      dev_title: "I also build web interfaces",
+      dev_link: "See projects",
     },
     projects: {
-      eyebrow: "04 · PROJECTS",
       title: "Projects",
+      thesis_badge: "Final degree project",
+      personal_badge: "Personal project",
+      pro_badge: "Professional project",
+      pro_title: "Zoho implementations",
+      personal_title: "Personal and thesis projects",
       demo: "Demo",
       code: "Code",
-      docs: "Tech docs",
+    },
+    experience: {
+      title: "Experience",
+      current: "Currently",
     },
     contact: {
-      eyebrow: "05 · CONTACT",
-      title: "Let's talk",
-      body: "Want to collaborate? Message me!",
-      cta: "Message on WhatsApp",
-      cta_email: "Send an email",
+      title: "Want to work together? Send me a message!",
+      cta_email: "Email",
+      cta_whatsapp: "WhatsApp",
     },
     footer: {
-      built: "Designed and built by Milagro Martino.",
+      rights: "© 2026 Milagro Martino",
     },
   },
 };

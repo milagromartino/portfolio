@@ -1,41 +1,19 @@
 import React from "react";
 import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../data/translations";
 
 export default function About() {
-  const { t } = useLanguage();
-  const facts = t("about.facts");
-
-  const keys = ["education", "languages", "location"];
+  const { lang, t } = useLanguage();
+  const paragraphs = translations[lang].about.paragraphs;
 
   return (
-    <section id="about" className="max-w-content mx-auto px-6 py-10 md:py-14">
-      <div className="file-window">
-        <div className="file-titlebar">
-          <span className="file-dot"></span>
-          <span className="file-dot"></span>
-          <span className="file-dot"></span>
-          <span className="file-name">about.tsx</span>
-        </div>
-
-        <div className="px-6 sm:px-10 py-9 sm:py-10">
-          <p className="code-comment mb-5">// {t("about.eyebrow").toLowerCase()}</p>
-          <h2 className="font-display font-medium text-2xl text-ink mb-6">{t("about.title")}</h2>
-
-          <p className="font-body text-inkSoft leading-relaxed text-sm sm:text-base max-w-2xl mb-8">
-            {t("about.body")}
-          </p>
-
-          <div className="font-mono text-xs sm:text-sm bg-bgDeep border border-line rounded p-4 sm:p-5 max-w-xl">
-            {Array.isArray(facts) &&
-              facts.map((f, i) => (
-                <div key={f.label} className="py-1">
-                  <span className="text-accent">{keys[i] || "field"}</span>
-                  <span className="text-inkMuted">: </span>
-                  <span className="text-tealChipText">"{f.value}"</span>
-                  <span className="text-inkMuted">,</span>
-                </div>
-              ))}
-          </div>
+    <section id="about" className="mx-auto max-w-content scroll-mt-6 px-5 pt-8 pb-12">
+      <h2 className="mb-3 text-center text-sm text-mute">{t("about.title")}</h2>
+      <div className="rounded-3xl border border-line bg-card px-6 py-8 shadow-card sm:px-10">
+        <div className="mx-auto max-w-2xl space-y-4 text-[15px] leading-relaxed text-soft">
+          {paragraphs.map((p) => (
+            <p key={p}>{p}</p>
+          ))}
         </div>
       </div>
     </section>

@@ -8,13 +8,14 @@ export const projectsData = [
       en: "Intelligent Property Recommendation System",
     },
     about: {
-      es: "Proyecto de tesis (UNIDA, 2025). Aplicación web con chatbot propio que interpreta consultas en lenguaje natural, conectado a un modelo LLM especializado (sqlcoder-7b-2), para recomendar propiedades del mercado inmobiliario paraguayo. Los datos se alimentan mediante web scraping automatizado diario sobre portales públicos.",
-      en: "Thesis project (UNIDA, 2025). A web app with a custom chatbot that understands natural-language questions. It connects to a specialized LLM (sqlcoder-7b-2) to recommend properties in the Paraguayan real estate market. The data comes from daily automated web scraping of public listing sites.",
+      es: "UNIDA, 2025. Aplicación web con un chatbot que entiende consultas en lenguaje natural y recomienda propiedades en Paraguay. Datos actualizados cada día con web scraping.",
+      en: "UNIDA, 2025. A web app with a chatbot that understands natural-language questions and recommends properties in Paraguay. Data updated daily with web scraping.",
     },
     tags: ["Next.js", "TypeScript", "Express", "Prisma", "PostgreSQL", "LLM"],
     github: "https://github.com/RealStateDev/backend_real_state_ai.git",
+    githubLabel: { es: "Código frontend", en: "Frontend code" },
     githubSecondary: {
-      label: { es: "Repo del scraper", en: "Scraper repo" },
+      label: { es: "Código backend", en: "Backend code" },
       link: "https://github.com/RealStateDev/scraper-infocasas",
     },
     screenshots: [

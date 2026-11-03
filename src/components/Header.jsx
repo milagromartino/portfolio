@@ -1,76 +1,62 @@
-import React, { useState } from "react";
+import React from "react";
+import { Moon, Sun } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import { useTheme } from "../context/ThemeContext";
+
+const links = [
+  { id: "home", key: "nav.home" },
+  { id: "about", key: "nav.about" },
+  { id: "projects", key: "nav.projects" },
+  { id: "contact", key: "nav.contact" },
+];
 
 export default function Header() {
-  const { t, lang, toggleLang } = useLanguage();
-  const [open, setOpen] = useState(false);
-
-  const tabs = [
-    { href: "#about", label: "about.tsx" },
-    { href: "#experience", label: "experience.tsx" },
-    { href: "#skills", label: "skills.tsx" },
-    { href: "#projects", label: "projects.tsx" },
-    { href: "#contact", label: "contact.tsx" },
-  ];
+  const { lang, toggleLang, t } = useLanguage();
+  const { dark, toggleTheme } = useTheme();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur">
-      <div className="max-w-content mx-auto px-6 py-3 flex items-center justify-between">
-        <a href="#top" className="font-mono font-medium text-sm text-inkSoft">
-          ~/milagro <span className="text-accent">$</span>
-        </a>
+    <header id="home" className="mx-auto max-w-content px-5 pt-5">
+      <div className="flex flex-wrap items-center justify-between gap-3 sm:flex-nowrap">
+        <span className="hidden w-24 sm:block" aria-hidden="true" />
 
-        <nav className="hidden md:flex items-center gap-1">
-          {tabs.map((tItem) => (
+        <nav
+          aria-label={t("nav.menu")}
+          className="order-3 flex w-full justify-center overflow-x-auto rounded-full border border-line bg-glass p-1 text-xs sm:order-none sm:w-auto sm:text-sm"
+        >
+          {links.map((l, i) => (
             <a
-              key={tItem.href}
-              href={tItem.href}
-              className="font-mono text-xs text-inkSoft hover:text-ink hover:bg-bgRaised px-3 py-1.5 rounded transition-colors"
+              key={l.id}
+              href={`#${l.id}`}
+              className={`whitespace-nowrap rounded-full px-3 py-1.5 transition-colors sm:px-4 ${
+                i === 0 ? "bg-chip font-medium text-ink" : "text-soft hover:text-ink"
+              }`}
             >
-              {tItem.label}
+              {t(l.key)}
             </a>
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="ml-auto flex items-center gap-2 sm:ml-0 sm:w-28 sm:justify-end">
           <button
+            type="button"
             onClick={toggleLang}
-            aria-label="Toggle language"
-            className="font-mono text-xs border border-line rounded px-3 py-1.5 flex items-center gap-1 hover:border-accent transition-colors"
+            aria-label={t("nav.lang")}
+            className="whitespace-nowrap rounded-full border border-line bg-glass px-3 py-1.5 text-xs"
           >
-            <span className={lang === "es" ? "text-accent font-semibold" : "text-inkSoft"}>ES</span>
-            <span className="text-line">|</span>
-            <span className={lang === "en" ? "text-accent font-semibold" : "text-inkSoft"}>EN</span>
+            <span className={lang === "es" ? "font-medium" : "text-mute"}>ES</span>
+            <span className="text-mute"> · </span>
+            <span className={lang === "en" ? "font-medium" : "text-mute"}>EN</span>
           </button>
-
           <button
-            className="md:hidden w-9 h-9 flex items-center justify-center border border-line rounded"
-            onClick={() => setOpen((v) => !v)}
-            aria-label="Menu"
+            type="button"
+            onClick={toggleTheme}
+            aria-label={t("nav.theme")}
+            className="grid h-8 w-8 place-items-center rounded-full border border-line bg-glass"
           >
-            <div className="w-4 space-y-1">
-              <span className="block h-px bg-ink"></span>
-              <span className="block h-px bg-ink"></span>
-              <span className="block h-px bg-ink"></span>
-            </div>
+            {dark ? <Sun size={15} /> : <Moon size={15} />}
           </button>
         </div>
       </div>
-
-      {open && (
-        <nav className="md:hidden border-t border-line bg-bg px-6 py-4 flex flex-col gap-3">
-          {tabs.map((tItem) => (
-            <a
-              key={tItem.href}
-              href={tItem.href}
-              onClick={() => setOpen(false)}
-              className="font-mono text-sm text-inkSoft"
-            >
-              {tItem.label}
-            </a>
-          ))}
-        </nav>
-      )}
     </header>
   );
 }
