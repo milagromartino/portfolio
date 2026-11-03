@@ -3,6 +3,8 @@ export const translations = {
     nav: {
       home: "Inicio",
       about: "Sobre mí",
+      implementations: "Implementaciones",
+      implementations_short: "Zoho",
       projects: "Proyectos",
       contact: "Contacto",
       menu: "Navegación principal",
@@ -68,6 +70,8 @@ export const translations = {
     nav: {
       home: "Home",
       about: "About me",
+      implementations: "Implementations",
+      implementations_short: "Zoho",
       projects: "Projects",
       contact: "Contact",
       menu: "Main navigation",
@@ -118,7 +122,7 @@ export const translations = {
     },
     experience: {
       title: "Experience",
-      current: "Currently",
+      current: "Present",
     },
     contact: {
       title: "Want to work together? Send me a message!",

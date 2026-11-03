@@ -6,6 +6,7 @@ import { useTheme } from "../context/ThemeContext";
 const links = [
   { id: "home", key: "nav.home" },
   { id: "about", key: "nav.about" },
+  { id: "implementations", key: "nav.implementations", short: "nav.implementations_short" },
   { id: "projects", key: "nav.projects" },
   { id: "contact", key: "nav.contact" },
 ];
@@ -21,17 +22,24 @@ export default function Header() {
 
         <nav
           aria-label={t("nav.menu")}
-          className="order-3 flex w-full justify-center overflow-x-auto rounded-full border border-line bg-glass p-1 text-xs sm:order-none sm:w-auto sm:text-sm"
+          className="order-3 flex w-full justify-center overflow-x-auto rounded-full border border-line bg-glass p-1 text-[11px] sm:order-none sm:w-auto sm:text-sm"
         >
           {links.map((l, i) => (
             <a
               key={l.id}
               href={`#${l.id}`}
-              className={`whitespace-nowrap rounded-full px-3 py-1.5 transition-colors sm:px-4 ${
+              className={`whitespace-nowrap rounded-full px-2 py-1.5 transition-colors sm:px-4 ${
                 i === 0 ? "bg-chip font-medium text-ink" : "text-soft hover:text-ink"
               }`}
             >
-              {t(l.key)}
+              {l.short ? (
+                <>
+                  <span className="sm:hidden">{t(l.short)}</span>
+                  <span className="hidden sm:inline">{t(l.key)}</span>
+                </>
+              ) : (
+                t(l.key)
+              )}
             </a>
           ))}
         </nav>
