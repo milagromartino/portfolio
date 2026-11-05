@@ -14,14 +14,14 @@ export const translations = {
     hero: {
       title_a: "Automatización de procesos",
       title_b: "y soluciones CRM",
-      subtitle: "Ingeniera Informática  |  Desarrollo de Software y Soluciones CRM",
+      subtitle: "Especialista CRM  |  Integración de sistemas  |  Desarrolladora de Software",
       cta_about: "Sobre mí",
       cta_cv: "Descargar CV",
     },
     about: {
       title: "Sobre mí",
       paragraphs: [
-        "Soy Ingeniera Informática con experiencia en CRM, automatización de procesos y desarrollo front-end. Me distingo por mi capacidad de aprendizaje continuo, mi facilidad para el trabajo en equipo y mi enfoque en nuevos retos profesionales.",
+        "Ingeniera Informática con experiencia en soluciones CRM, automatización de procesos, integración de sistemas y desarrollo de software. Me distingo por mi capacidad de aprendizaje continuo, mi facilidad para el trabajo en equipo y mi enfoque en nuevos retos profesionales.",
       ],
     },
     work: {
@@ -79,16 +79,16 @@ export const translations = {
       lang: "Change language",
     },
     hero: {
-      title_a: "Business Automation",
+      title_a: "Business Process Automation",
       title_b: "and CRM Solutions",
-      subtitle: "Computer Science Engineer  |  Software Development & CRM Solutions",
+      subtitle: "CRM Specialist  |  System Integrations  |  Software Developer",
       cta_about: "About me",
       cta_cv: "Download CV",
     },
     about: {
       title: "About me",
       paragraphs: [
-        "I'm a Computer Science Engineer with experience in CRM, process automation, and front-end development. I stand out for my ability to keep learning, my ease working with others, and my focus on new professional challenges.",
+        "Computer Science Engineer with experience in CRM solutions, business process automation, system integrations, and software development. I stand out for my ability to keep learning, my ease working with others, and my focus on new professional challenges.",
       ],
     },
     work: {
